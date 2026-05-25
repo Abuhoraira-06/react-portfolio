@@ -48,33 +48,44 @@ const activities = [
 
 const Activities = () => {
   return (
-    <section className="bg-[#0f172a] py-12 px-6 min-h-screen text-white">
+    <section className="min-h-screen bg-[#0D0221] py-16 px-6 text-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 text-center text-white">
+        
+        <h2 className="text-4xl font-bold mb-12 text-center">
           Activities
         </h2>
+
         <div className="relative border-l-4 border-blue-600 pl-6 space-y-10">
           {activities.map((activity, index) => (
             <div key={index} className="relative group">
+              
               {/* Timeline Dot */}
-              <span className="absolute -left-4 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r animate-pulse shadow-md text-white text-sm font-bold bg-blue-500">
+              <span className="absolute -left-4 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 shadow-md text-white">
                 <FaGraduationCap size={14} />
               </span>
 
-              {/* Clickable Card */}
-              <a
-                href={activity.certificate}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
+              {/* Activity Card */}
+              <div
+                className={`bg-gradient-to-r ${activity.color} text-black rounded-xl shadow-md p-6 transition-transform duration-300 group-hover:scale-[1.02]`}
               >
-                <div
-                  className={`bg-gradient-to-r ${activity.color} text-black rounded-xl shadow-md p-5 transition-transform duration-300 transform group-hover:scale-[1.02]`}
+                <h3 className="text-xl font-semibold mb-1">
+                  {activity.title}
+                </h3>
+
+                <p className="text-sm opacity-90 mb-3">
+                  {activity.subtitle}
+                </p>
+
+                {/* View Link */}
+                <a
+                  href={activity.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-purple-700 hover:underline"
                 >
-                  <h3 className="text-xl font-semibold">{activity.title}</h3>
-                  <p className="text-sm opacity-90">{activity.subtitle}</p>
-                </div>
-              </a>
+                  View →
+                </a>
+              </div>
             </div>
           ))}
         </div>

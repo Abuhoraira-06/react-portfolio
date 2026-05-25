@@ -8,9 +8,9 @@ function Navbar() {
         <ul className="flex space-x-6 font-medium">
           <li><a href="#skills" className="hover:text-blue-400">Skills</a></li>
           <li><a href="#projects" className="hover:text-blue-400">Projects</a></li>
-          <li><a href="#courses" className="hover:text-blue-400">Courses</a></li>
+          <li><a href="#certifications" className="hover:text-blue-400">Certifications</a></li>
           <li><a href="#workshops" className="hover:text-blue-400">Workshops</a></li>
-          <li><a href="#internship" className="hover:text-blue-400">Internship</a></li>
+          <li><a href="#internships" className="hover:text-blue-400">Internships</a></li>
           <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
         </ul>
       </div>

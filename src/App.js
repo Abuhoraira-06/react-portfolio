@@ -45,9 +45,9 @@ function App() {
         <button onClick={() => scrollToSection("hero")}>About</button>
         <button onClick={() => scrollToSection("skills")}>Skills</button>
         <button onClick={() => scrollToSection("projects")}>Projects</button>
-        <button onClick={() => scrollToSection("courses")}>Certifications</button>
+        <button onClick={() => scrollToSection("Certifications")}>Certifications</button>
         <button onClick={() => scrollToSection("activities")}>Activities</button>{/* Changed label and target */}
-        <button onClick={() => scrollToSection("internship")}>Internship</button>
+        <button onClick={() => scrollToSection("internships")}>Internships</button>
         <button onClick={() => scrollToSection("contact")}>Contact</button>
       </div>
 
@@ -92,7 +92,7 @@ function App() {
           <Activities /> {/* Updated component call */}
         </section>
 
-        <section id="internship" className="snap-start w-screen h-screen flex-shrink-0">
+        <section id="internships" className="snap-start w-screen h-screen flex-shrink-0">
           <Internship />
         </section>
 

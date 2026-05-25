@@ -3,64 +3,71 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <section className="bg-[#0f172a] text-white py-16 px-6 flex flex-col items-center text-center">
-      {/* Profile Image at Top */}
-      <motion.img
-        src="/images/profile.jpg"
-        alt="Abu Horaira"
-        className="w-36 h-36 object-cover rounded-full border-4 border-blue-500 mb-6 shadow-lg"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      />
+    <section className="min-h-screen bg-[#0D0221] text-white flex items-center justify-center px-6">
+      <div className="max-w-3xl w-full text-center">
+        
+        {/* Profile Image */}
+        <motion.img
+          src="/images/profile.jpg"
+          alt="Abu Horaira"
+          className="w-32 h-32 mx-auto object-cover rounded-full border-4 border-blue-500 shadow-lg mb-6"
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        />
 
-      {/* Name */}
-      <motion.h1
-        className="text-4xl font-bold mb-3"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        Abu Horaira
-      </motion.h1>
-
-      {/* Subtitle */}
-      <motion.p
-        className="text-lg text-gray-300 max-w-xl mb-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        AI & Data Science Student passionate about building intelligent systems. Experienced in Python, Machine Learning, and modern web technologies.
-      </motion.p>
-
-      {/* Buttons */}
-      <motion.div
-        className="flex gap-4 flex-wrap justify-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7 }}
-      >
-        {/* View Resume */}
-        <a
-          href="Abu Horaira Resume.pdf" // Make sure your PDF is in the public folder
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg shadow transition duration-300"
+        {/* Name */}
+        <motion.h1
+          className="text-4xl font-semibold mb-6 tracking-wide"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
         >
-          📄 View Resume
-        </a>
+          ABU HORAIRA
+        </motion.h1>
 
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/abu-horaira-ab47a9298"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-5 rounded-lg shadow transition duration-300"
+        {/* About Text */}
+        <motion.p
+          className="text-[15.5px] leading-7 text-gray-300 text-justify mb-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
         >
-          🔗 Connect on LinkedIn
-        </a>
-      </motion.div>
+          I am an AI and Data Science student with a strong passion for building intelligent
+          and data-driven applications. I enjoy working with Python, machine learning, and
+          data analysis to solve real-world problems. Through hands-on projects and
+          internships, I have gained practical experience in developing predictive models
+          and interactive web applications. I am continuously learning new technologies and
+          improving my analytical and problem-solving skills. My goal is to grow as a data
+          professional and contribute to impactful AI solutions.
+        </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          className="flex justify-center gap-4 flex-wrap"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+        >
+          <a
+            href="Abu Horaira Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium shadow"
+          >
+            View Resume
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/abu-horaira-ab47a9298"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2.5 rounded-lg bg-gray-700 hover:bg-gray-600 transition font-medium shadow"
+          >
+            Connect on LinkedIn
+          </a>
+        </motion.div>
+      </div>
     </section>
   );
 }
