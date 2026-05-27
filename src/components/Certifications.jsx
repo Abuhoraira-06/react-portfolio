@@ -7,6 +7,11 @@ import "swiper/css/pagination";
 
 const courses = [
   {
+    title: "Advanced Data Visualization using Power BI",
+    description: "Certified by Guvi",
+    link: "/certificates/powerbi.jpeg",
+  },
+  {
     title: "Data Analytics Job Simulation",
     description: "Certified by Deloitte",
     link: "/certificates/Deloitte.jpeg",
